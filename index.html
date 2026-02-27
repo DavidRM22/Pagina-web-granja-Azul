@@ -156,10 +156,27 @@
                         <img src="IMAGENES/CUERPO/GALERIA/Img8.png" class="ImagenFila">
                     </article>
                 </aside>
+                <aside id="FilaExtra" class="Fila d-none">
+                    <article class="ImgGaleria">
+                        <img src="IMAGENES/CUERPO/GALERIA/Img9.jpg" class="ImagenFila">
+                    </article>
+                    <article class="ImgGaleria">
+                        <img src="IMAGENES/CUERPO/GALERIA/Img10.jpg" class="ImagenFila">
+                    </article>
+                    <article class="ImgGaleria">
+                        <img src="IMAGENES/CUERPO/GALERIA/Img11.jpg" class="ImagenFila">
+                    </article>
+                    <article class="ImgGaleria">
+                        <img src="IMAGENES/CUERPO/GALERIA/Img12.jpg" class="ImagenFila">
+                    </article>
+                    <article class="ImgGaleria">
+                        <img src="IMAGENES/CUERPO/GALERIA/Img13.jpg" class="ImagenFila">
+                    </article>
+                </aside>
             </section>
 
             <Section id="CargaMas">
-                <p id="TextCargarMas">Cargar más</p>
+                <p id="TextCargarMas" class="clickable">Cargar más</p>
             </Section>
 
         </main>
@@ -192,6 +209,21 @@
 
     </div>
 
+    <script>
+        document.getElementById('TextCargarMas').addEventListener('click', function() {
+            var extra = document.getElementById('FilaExtra');
+            if (!extra) return;
+            if (extra.classList.contains('d-none')) {
+                // show rows and update text
+                extra.classList.remove('d-none');
+                this.textContent = 'Ver menos';
+            } else {
+                // hide rows and restore text
+                extra.classList.add('d-none');
+                this.textContent = 'Cargar más';
+            }
+        });
+    </script>
 </body>
 
 </html>

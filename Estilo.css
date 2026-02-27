@@ -1,6 +1,7 @@
 #ContenedorPrincipal{
-    height: 2900px;
-    width: 1800px auto;
+    /* remove fixed height so content can expand */
+    /* height: 2900px; */
+    width: 100%;
     background: #eeebeb;
 }
 
@@ -12,7 +13,8 @@ header{
 }
 
 main{
-    height: 2400px;
+    /* allow main to size based on its children */
+    /* height: 2400px; */
     width: 100%;
 }
 
@@ -138,9 +140,46 @@ nav{
 }
 
 #Galeria{
-    height: 600px;
+    /* height can expand with added rows */
+    /* height: 600px; */
     width: 70%;
     margin-left: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Fila{
+    width: 100%;
+    /* height: 45%; */
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.ImgGaleria{
+    /* keep all gallery items uniform */
+    aspect-ratio: 1/1;
+    width: 23%;
+    background: green;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ensure images fill the square and are cropped if needed */
+.ImagenFila{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ImagenFila{
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
 }
 
 .Fila{
