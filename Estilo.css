@@ -7,7 +7,7 @@
 header{
     height: 200px;
     width: 100%;
-    background: rgb(0,51,108);
+    background: rgb(0,51,108,1);
     display: flex;
 }
 
@@ -120,13 +120,13 @@ nav{
 }
 
 .Titulo{
-    color: blue;
+    color: #00336C;
     font-family: Baskerville Old Face;
     font-size: 20px;
 }
 
 .SubTitulo{
-    color: blue;
+    color: #00336C;
     font-family: Bradley Hand ITC;
     font-size: 50px;
 }
